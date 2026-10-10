@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Soumitra Behera – Data Analyst Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Sora:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--ink:#f5f5f7;--mute:#a1a1ad;--line:#26262c;--card:#0e0e12;--acc:#7a5af8;--acc2:#2dd4bf;--hot:#ff8f70;color-scheme:dark;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 'DM Sans',system-ui,sans-serif}
+h1,h2,h3{font-family:Sora,system-ui,sans-serif;margin:0;letter-spacing:-.02em}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--hot);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:64px}
+nav b{font:700 1rem Sora,sans-serif}
+nav div{display:flex;gap:20px}
+nav a{text-decoration:none;color:var(--mute);font-weight:500;font-size:.95rem}
+nav a:hover{color:var(--acc)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:72px 0 64px}
+.hero .role{color:var(--acc);font:700 1rem Sora,sans-serif;margin-bottom:14px}
+h1{font-size:clamp(2.8rem,9vw,5.2rem);font-weight:800;line-height:.98}
+.hero p{font-size:1.15rem;color:var(--mute);max-width:46ch;margin:22px 0 0}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-block;padding:12px 22px;border-radius:12px;font:600 .95rem Sora,sans-serif;text-decoration:none;border:2px solid var(--ink)}
+.btn.p{background:var(--acc);border-color:var(--acc);color:#fff}
+.btn:hover{transform:translateY(-2px)}
+.btn{transition:transform .15s}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:0 24px 60px -24px rgba(91,61,245,.35)}
+.panel svg{width:100%;height:auto;display:block}
+.bar{transform-origin:bottom;transform-box:fill-box;animation:rise .9s cubic-bezier(.2,.8,.2,1) both}
+.ln{stroke-dasharray:420;stroke-dashoffset:420;animation:draw 1.6s .5s ease forwards}
+@keyframes rise{from{transform:scaleY(0)}}
+@keyframes draw{to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){.bar,.ln{animation:none}.ln{stroke-dashoffset:0}html{scroll-behavior:auto}}
+section{padding:56px 0}
+h2{font-size:clamp(1.8rem,5vw,2.4rem);margin-bottom:8px}
+.sub{color:var(--mute);margin:0 0 32px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.thumb{height:130px;display:grid;place-items:center;border-bottom:1px solid var(--line)}
+.t1{background:linear-gradient(135deg,color-mix(in srgb,var(--acc) 18%,var(--card)),var(--card))}
+.t2{background:linear-gradient(135deg,color-mix(in srgb,var(--acc2) 20%,var(--card)),var(--card))}
+.t3{background:linear-gradient(135deg,color-mix(in srgb,var(--hot) 20%,var(--card)),var(--card))}
+.thumb svg{height:96px;width:auto}
+.cb{padding:20px;display:flex;flex-direction:column;flex:1}
+.card h3{font-size:1.2rem}
+.card .what{color:var(--mute);font-size:.95rem;margin:2px 0 12px}
+.card ul{margin:0 0 16px;padding-left:18px;font-size:.95rem}
+.card li{margin-bottom:5px}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto;margin-bottom:16px}
+.tags span,.chips span{font:500 .8rem 'DM Sans',sans-serif;background:var(--bg);border:1px solid var(--line);padding:3px 11px;border-radius:99px}
+.card a.go{font:600 .92rem Sora,sans-serif;color:var(--acc);text-decoration:none}
+.tl{border-left:2px solid var(--line);margin-left:6px}
+.job{position:relative;padding:0 0 32px 26px}
+.job::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--acc);border:3px solid var(--bg)}
+.job h3{font-size:1.15rem}
+.job .when{color:var(--acc);font:600 .85rem Sora,sans-serif;margin:2px 0 8px}
+.job ul{margin:0;padding-left:18px;color:var(--mute);max-width:70ch}
+.job li{margin-bottom:5px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chips span{font-size:.95rem;padding:7px 15px;background:var(--card)}
+.chips .main{background:var(--acc);color:#fff;border-color:var(--acc)}
+.contact{background:var(--card);border:1px solid var(--line);color:var(--ink);border-radius:26px;padding:48px 32px;text-align:center;margin:20px 0 64px}
+.contact h2{color:var(--ink)}
+.contact p{opacity:.8;margin:0 auto 24px;max-width:44ch}
+.contact .btn{border-color:var(--ink);color:var(--ink);margin:4px}
+.contact .btn.p{background:var(--hot);border-color:var(--hot);color:#000}
+footer{text-align:center;color:var(--mute);font-size:.9rem;padding-bottom:40px}
+body{background:radial-gradient(900px 520px at 85% -5%,rgba(122,90,248,.30),transparent 60%),radial-gradient(700px 500px at -5% 28%,rgba(45,212,191,.12),transparent 60%),radial-gradient(600px 400px at 100% 70%,rgba(255,143,112,.10),transparent 60%),#000;background-attachment:fixed}
+h1{background:linear-gradient(120deg,#fff 15%,#c4b5ff 55%,#5eead4);-webkit-background-clip:text;background-clip:text;color:transparent}
+.btn.p{background:linear-gradient(135deg,#7a5af8,#a855f7);border-color:transparent;box-shadow:0 10px 30px -10px rgba(122,90,248,.8)}
+.panel{background:linear-gradient(160deg,#181433,#0a0a10);border-color:#3a3170;box-shadow:0 0 0 1px rgba(122,90,248,.2),0 30px 80px -20px rgba(122,90,248,.55)}
+.card{transition:transform .25s,border-color .25s,box-shadow .25s}
+.card:hover{transform:translateY(-6px);border-color:var(--acc);box-shadow:0 24px 50px -24px rgba(122,90,248,.6)}
+.thumb{height:150px}
+h2::after{content:"";display:block;width:44px;height:4px;border-radius:4px;background:linear-gradient(90deg,var(--acc),var(--acc2));margin-top:10px}
+.contact h2::after{margin:10px auto 0}
+.contact{background:radial-gradient(500px 260px at 50% 0,rgba(122,90,248,.35),transparent 70%),var(--card)}
+.job::before{box-shadow:0 0 0 4px rgba(122,90,248,.25)}
+.chips span{transition:border-color .2s,transform .2s}
+.chips span:hover{border-color:var(--acc2);transform:translateY(-2px)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px}
+.stat{border:1px solid var(--line);background:rgba(255,255,255,.03);border-radius:16px;padding:18px 20px}
+.stat b{display:block;font:800 1.9rem Sora,sans-serif;background:linear-gradient(120deg,#a995ff,#5eead4);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat span{color:var(--mute);font-size:.9rem}
+@media(max-width:700px){.stats{grid-template-columns:1fr}.stat{padding:16px 18px}.stat b{font-size:1.5rem}}
+@media(max-width:780px){.hero,.two{grid-template-columns:1fr}.hero{padding-top:44px}nav div a:nth-child(n+4){display:none}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><b>Soumitra Behera</b><div><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div></div></nav>
+
+<div class="wrap">
+  <header class="hero">
+    <div>
+      <div class="role">Data Analyst · Business Analyst</div>
+      <h1>Data that leads to decisions.</h1>
+      <p>I'm Soumitra. I build Power BI dashboards that turn raw data into clear, decision-ready insights, using DAX, data modeling, MySQL, Excel and Tableau.</p>
+      <div class="btns"><a class="btn p" href="#projects">See my projects</a><a class="btn" href="#contact">Get in touch</a></div>
+    </div>
+    <div class="panel" aria-hidden="true">
+      <svg viewBox="0 0 400 300">
+        <g fill="var(--line)"><rect x="20" y="20" width="360" height="1"/><rect x="20" y="100" width="360" height="1"/><rect x="20" y="180" width="360" height="1"/><rect x="20" y="260" width="360" height="1"/></g>
+        <g><rect class="bar" style="animation-delay:.05s" x="36" y="170" width="38" height="90" rx="6" fill="var(--acc)"/><rect class="bar" style="animation-delay:.15s" x="96" y="130" width="38" height="130" rx="6" fill="var(--acc)"/><rect class="bar" style="animation-delay:.25s" x="156" y="150" width="38" height="110" rx="6" fill="var(--acc)"/><rect class="bar" style="animation-delay:.35s" x="216" y="90" width="38" height="170" rx="6" fill="var(--acc)"/><rect class="bar" style="animation-delay:.45s" x="276" y="110" width="38" height="150" rx="6" fill="var(--acc)"/><rect class="bar" style="animation-delay:.55s" x="336" y="50" width="38" height="210" rx="6" fill="var(--hot)"/></g>
+        <path class="ln" d="M55 150 L115 105 L175 125 L235 62 L295 80 L355 30" fill="none" stroke="var(--acc2)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </header>
+  <div class="stats"><div class="stat"><b>Clean</b><span>Prepare messy data with MySQL, Power Query and Excel.</span></div><div class="stat"><b>Model</b><span>Shape data models and write DAX measures for accurate KPIs.</span></div><div class="stat"><b>Visualize</b><span>Build interactive Power BI dashboards that people can act on.</span></div></div>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <p class="sub">Dashboards built end to end in Power BI.</p>
+    <div class="grid">
+      <article class="card">
+        <div class="thumb t1"><svg viewBox="0 0 120 96" aria-hidden="true"><g fill="var(--acc)"><rect x="8" y="50" width="16" height="40" rx="3"/><rect x="32" y="30" width="16" height="60" rx="3"/><rect x="56" y="14" width="16" height="76" rx="3"/><rect x="80" y="40" width="16" height="50" rx="3"/></g><rect x="100" y="60" width="14" height="30" rx="3" fill="var(--hot)"/></svg></div>
+        <div class="cb"><h3>E-commerce: Olist Store Analysis</h3><div class="what">Customer orders and payments in Sao Paulo</div>
+          <ul><li>Visualized average payment value and price to show Sao Paulo's role in revenue.</li><li>Charted how customers use credit cards and leave reviews.</li><li>Gave insights for marketing and logistics strategy in Brazil's top market.</li></ul>
+          <div class="tags"><span>Power BI</span><span>Data visualization</span></div>
+          <a class="go" href="https://app.powerbi.com/view?r=eyJrIjoiNjY4MDQ2MjMtMTA2NC00NzFmLWJhYjItNzlhMjVlNmRiOWI3IiwidCI6IjE4MGU0OTAxLWVkZjktNDdhMC05NzU2LTA1OWJlMmZiMWNjMSJ9" target="_blank" rel="noopener">View project →</a></div>
+      </article>
+      <article class="card">
+        <div class="thumb t2"><svg viewBox="0 0 96 96" aria-hidden="true"><circle cx="48" cy="48" r="34" fill="none" stroke="var(--line)" stroke-width="16"/><circle cx="48" cy="48" r="34" fill="none" stroke="var(--acc2)" stroke-width="16" stroke-dasharray="130 214" transform="rotate(-90 48 48)"/><circle cx="48" cy="48" r="34" fill="none" stroke="var(--acc)" stroke-width="16" stroke-dasharray="50 214" stroke-dashoffset="-130" transform="rotate(-90 48 48)"/></svg></div>
+        <div class="cb"><h3>High Cloud Airlines</h3><div class="what">Airline performance and route efficiency</div>
+          <ul><li>Built an interactive dashboard for passengers, load factors and distances.</li><li>Found key carrier-city routes and compared weekday vs. weekend load factor.</li><li>Used DAX and a refactored data model to make the report accurate and faster.</li></ul>
+          <div class="tags"><span>Power BI</span><span>DAX</span><span>Data modeling</span></div>
+          <a class="go" href="https://github.com/Soumitra457/High-Cloud-Airline-Analysis">View project →</a></div>
+      </article>
+      <article class="card">
+        <div class="thumb t3"><svg id="heat" viewBox="0 0 126 84" aria-hidden="true"></svg></div>
+        <div class="cb"><h3>Media Analytics</h3><div class="what">Facebook Ads and LinkedIn performance</div>
+          <ul><li>Tracked ROAS, CTR, conversions and top campaigns from Facebook Ads data.</li><li>Found high-engagement LinkedIn topics and best publishing days.</li><li>Built multi-page dashboards with dynamic filters and custom DAX KPIs.</li></ul>
+          <div class="tags"><span>Power BI</span><span>DAX</span><span>Marketing KPIs</span></div>
+          <a class="go" href="https://github.com/Soumitra457/Media-Analytics">View project →</a></div>
+      </article>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <p class="sub">Around a year and a half working with business data.</p>
+    <div class="tl">
+      <div class="job"><h3>Data Analyst · Sai Informatics</h3><div class="when">Dec 2024 – Dec 2025</div>
+        <ul><li>Collected, cleaned and analyzed data from several sources for business reporting.</li><li>Prepared reports, dashboards and visualizations in Power BI and Excel.</li><li>Interpreted data trends to support decisions, and kept data accurate and confidential.</li></ul></div>
+      <div class="job"><h3>Data Analyst Intern · AI Variant</h3><div class="when">Aug 2024 – May 2025</div>
+        <ul><li>Cleaned and transformed data with MySQL and Power Query.</li><li>Found insights for internal reporting and product strategy.</li><li>Improved Power BI dashboard performance and usability with DAX and cleaner visuals.</li></ul></div>
+    </div>
+  </section>
+
+  <section id="skills" class="two">
+    <div><h2>Skills</h2><p class="sub">Power BI is my main tool.</p>
+      <div class="chips"><span class="main">Power BI</span><span>MySQL</span><span>Tableau</span><span>Excel</span><span>DAX</span><span>Data modeling</span><span>Data cleaning</span><span>Dashboard creation</span></div></div>
+    <div><h2>Education</h2><p class="sub">And certification.</p>
+      <p><b>B.Tech in Computer Engineering</b><br>Silicon University, Bhubaneswar, 2020–2024<br>CGPA 8.51</p>
+      <p><b>Data Analyst certification</b><br>ExcelR</p>
+      <p style="color:var(--mute)">Languages: English, Hindi, Odia</p></div>
+  </section>
+
+  <section id="contact" style="padding-bottom:0">
+    <div class="contact"><h2>Let's work together</h2>
+      <p>I'm open to data analyst and business analyst roles. Send me a message and I'll reply soon.</p>
+      <a class="btn p" href="mailto:beherasoumitra01@gmail.com">Email me</a><a class="btn" href="https://www.linkedin.com/in/soumitra789">LinkedIn</a><a class="btn" href="https://github.com/soumitra457">GitHub</a><a class="btn" href="tel:+918337959181">Call</a></div>
+  </section>
+  <footer>© Soumitra Behera</footer>
+</div>
+<script>
+(function(){var s=document.getElementById('heat'),o=[.2,.5,.9,.35,.7,.25,.6,.85,.3,.55,.95,.4,.2,.65,.45,.8,.3,.6,.5,.9,.25,.7,.4,.55,.85,.3,.6,.45],h='';
+for(var i=0;i<28;i++){h+='<rect x="'+(i%7)*18+'" y="'+Math.floor(i/7)*21+'" width="15" height="18" rx="3" fill="var(--hot)" fill-opacity="'+o[i]+'"/>'}
+s.innerHTML=h})();
+</script>
+</body>
+</html>
